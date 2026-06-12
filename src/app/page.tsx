@@ -43,14 +43,20 @@ export default function Home() {
             Inngest Cron Demo
           </h1>
           <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-            每 5 分钟调用 <code className="font-mono text-xs bg-zinc-100 dark:bg-zinc-800 px-1 py-0.5 rounded">/api/time</code> 并记录本地时间
+            每 1 分钟调用{" "}
+            <code className="font-mono text-xs bg-zinc-100 dark:bg-zinc-800 px-1 py-0.5 rounded">
+              /api/time
+            </code>{" "}
+            并记录本地时间
           </p>
         </div>
 
         <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
           <span
             className={`h-2.5 w-2.5 rounded-full ${
-              state.running ? "bg-green-500 animate-pulse" : "bg-zinc-300 dark:bg-zinc-600"
+              state.running
+                ? "bg-green-500 animate-pulse"
+                : "bg-zinc-300 dark:bg-zinc-600"
             }`}
           />
           <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
@@ -92,7 +98,9 @@ export default function Home() {
                   <span className="text-xs text-zinc-300 dark:text-zinc-600 w-5 text-right font-mono">
                     {i + 1}
                   </span>
-                  <span className="text-sm font-mono text-zinc-700 dark:text-zinc-300">{t}</span>
+                  <span className="text-sm font-mono text-zinc-700 dark:text-zinc-300">
+                    {t}
+                  </span>
                 </li>
               ))}
             </ul>
