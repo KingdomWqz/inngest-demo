@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 
 interface TimerState {
   running: boolean;
@@ -105,6 +106,14 @@ export default function Home() {
               ))}
             </ul>
           )}
+        </div>
+        <div className="flex justify-end">
+          <Link
+            href="/chat"
+            className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+          >
+            前往 AI 对话 →
+          </Link>
         </div>
       </div>
     </div>
