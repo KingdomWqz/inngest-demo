@@ -44,7 +44,7 @@ export default function Home() {
             Inngest Cron Demo
           </h1>
           <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-            每 5 分钟调用{" "}
+            每 1 分钟调用{" "}
             <code className="font-mono text-xs bg-zinc-100 dark:bg-zinc-800 px-1 py-0.5 rounded">
               /api/time
             </code>{" "}
